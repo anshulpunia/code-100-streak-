@@ -1,6 +1,6 @@
 #include <stdio.h>
-
 int main() {
+
     int n, i, sum = 0;
 
     printf("Enter the number of odd numbers (n): ");
