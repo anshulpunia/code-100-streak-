@@ -1,5 +1,6 @@
 #include <stdio.h> 
- int main {
+ int main () {
+
     int num, remn, reversednum =0 ;
     printf("enter the no ");
     scanf("%d",&num);
@@ -10,7 +11,7 @@
         num /= 10 ;
 
     }
-printf("reversed no.= %d\n",reversernum);
+printf("reversed no.= %d\n",reverserdnum);
 return 0;
 
 
