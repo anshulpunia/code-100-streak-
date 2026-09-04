@@ -14,7 +14,7 @@ int main (){
         }
 
         printf("\n");
-        for(int a = 5;a>=i;a--){
+        for(int a = 52;a>=i;a--){
             printf(" ");
 
         }
