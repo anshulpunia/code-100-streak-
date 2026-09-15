@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int r, c;
+    printf("Enter rows and columns: ");
+    scanf("%d %d", &r, &c);
+
+    int matrix[r][c];
+    int row_sums[r];
+
+    printf("Enter matrix elements:\n");
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+   
+    for (int i = 0; i < r; i++) {
+        row_sums[i] = 0;
+        for (int j = 0; j < c; j++) {
+            row_sums[i] += matrix[i][j];
+        }
+    }
+
+    
+    printf("\nRow sums:\n");
+    for (int i = 0; i < r; i++) {
+        printf("Row %d sum = %d\n", i + 1, row_sums[i]);
+    }
+
+    return 0;
+}
+
