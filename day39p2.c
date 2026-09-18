@@ -13,7 +13,7 @@ int main() {
         {
             scanf("%d", &matrix[i][j]);
         }
-    }2 
+    } 
 
     int diagonal_sum = 0;
     for (int i = 0; i < r && i < c; i++)
