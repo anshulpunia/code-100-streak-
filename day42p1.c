@@ -1,43 +1,31 @@
 #include <stdio.h>
-int main (){
-    int r, c;
-    printf("Enter rows and columns: \n");
-    scanf("%d %d", &r, &c);
+#include <ctype.h>
 
-    int matrix1[r][c];
-    printf("enter the matrix\n");
-    for (int i = 0; i < r; i++) {
-        for (int j = 0; j < c; j++){
-            scanf("%d", &matrix1[i][j]);
+int main(void) {
+    char str[100];
+    int vowels = 0, consonants = 0;
+
+    printf("Enter a string: ");
+    if (fgets(str, sizeof(str), stdin) == NULL) {
+        return 1;
+    }
+
+    for (int i = 0; str[i] != '\0'; i++) {
+   
+        char ch = tolower((unsigned char)str[i]);
+
+        
+        if (ch >= 'a' && ch <= 'z') {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                vowels++;
+            } else {
+                consonants++;
+            }
         }
     }
-    int r2, c2;
-    printf("Enter rows and columns of 2nd matrix : \n");
-    scanf("%d %d", &r2, &c2);
 
-    int matrix2[r2][c2], result[r][c]; 
-    printf("enter the 2nd matrix \n");
-    for (int i = 0; i < r2; i++)
-    {
-        for (int j = 0; j < c2; j++)
-        {
-            scanf("%d", &matrix2[i][j]);
-        }
-    }
-    for(int i=0;i<r&&i<r2;i++){
-        for(int j=0;j<c&&j<c2;j++){
-            result[r][c] += matrix1[i][j]*matrix2[i][j];
+    printf("Vowels: %d\n", vowels);
+    printf("Consonants: %d\n", consonants);
 
-        }
-    }
-    printf("the product  is\n ");{
-        for (int i = 0; i < r; i++) {
-        for (int j = 0; j < c; j++) {
-            printf("%d ", result[r][c]);
-        }
-        printf("\n");
-    }
-    }
-    return  0 ;
-
+    return 0;
 }

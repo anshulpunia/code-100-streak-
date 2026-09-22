@@ -1,1 +1,1 @@
-  // printf("\n");
+str[strcspn(str, "\n")] = '\0';
