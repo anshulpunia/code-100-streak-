@@ -7,12 +7,12 @@
     
     while (num!=0){
         remn  = num % 10 ;
-        reversednum = reversed*10 + remn ;
+        reversednum = reversednum*10 + remn ;
         num /= 10 ;
 
     }
-printf("reversed no.= %d\n",reverserdnum);
-return 0;
+    printf("reversed no.= %d\n", reversednum);
+    return 0;
 
 
 

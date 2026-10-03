@@ -9,13 +9,11 @@ int main() {
         return 1;
     }
 
-    // Convert negative numbers to positive manually
-    temp = (num < 0) ? -num : num;
-
-    while (temp > 0) {
-        sum += temp % 10; // Extract the last digit and add to sum
-        temp /= 10;       // Remove the last digit
-    }
+    // 
+    for (; num != 0; num /= 10) {
+    temp = num % 10;
+    sum += temp;
+}
 
     printf("Sum of digits of %d is %d\n", num, sum);
 

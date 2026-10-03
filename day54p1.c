@@ -24,4 +24,4 @@ int main() {
 
     printf("Occurrences of '%c': %d\n", target, count);
     return 0;
-}w
+}
