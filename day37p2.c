@@ -3,7 +3,7 @@
 int main() {
     int r, c;
     printf("Enter rows and columns: ");
-    scanf("%d %d", &r, &c);
+    scanf("%d %d",&r,&c);
 
     int matrix[r][c];
     int row_sums[r];
@@ -11,7 +11,7 @@ int main() {
     printf("Enter matrix elements:\n");
     for (int i = 0; i < r; i++) {
         for (int j = 0; j < c; j++) {
-            scanf("%d", &matrix[i][j]);
+            scanf("%d",&matrix[i][j]);
         }
     }
 

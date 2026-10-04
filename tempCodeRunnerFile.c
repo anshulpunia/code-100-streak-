@@ -1,1 +1,1 @@
- a++;
+char ch = tolower((unsigned char)str[i]);
