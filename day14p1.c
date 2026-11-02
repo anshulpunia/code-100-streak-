@@ -6,7 +6,7 @@ int main() {
     printf("Enter the number of odd numbers (n): ");
     scanf("%d", &n);
 
-    // Loop through the first 'n' odd numbers
+    // Loop through the first 'n' odd numbersA
     for (i = 1; i <= n; i++) {
         // The i-th odd number is (2 * i - 1)
         sum += (2 * i - 1); 
