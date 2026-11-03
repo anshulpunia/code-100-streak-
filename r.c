@@ -1,18 +1,39 @@
 #include <stdio.h>
+#include <string.h>
+
 int main() {
-
-    int n, i, sum = 0;
-
-    printf("Enter the number of odd numbers (n): ");
-    scanf("%d", &n);
-
-    // Loop through the first 'n' odd numbersA
-    for (i = 1; i <= n; i++) {
-        // The i-th odd number is (2 * i - 1)
-        sum += (2 * i - 1); 
+    FILE *fp = fopen("info.txt", "w");
+    if (fp == NULL) {
+        printf("Error: Could not create file.\n");
+        return 1;
     }
 
-    printf("The sum of the first %d odd numbers is: %d\n", n, sum);
+    char name[100];
+    int age;
 
+    printf("Enter name: ");
+    if (fgets(name, sizeof(name), stdin)) {
+        name[strcspn(name, "\n")] = '\0';
+    }
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    fprintf(fp, "Name: %s\nAge: %d\n", name, age);
+    fclose(fp);
+
+    printf("Data successfully saved to info.txt\n");
+    FILE *fp = fopen("info.txt", "w");
+    if (fp == NULL) {
+        printf("Error: Could not open info.txt. Make sure the file exists.\n");
+        return 1;
+    }
+
+    char buffer[256];
+    while (fgets(buffer, sizeof(buffer), fp) != NULL) {
+        printf("%s", buffer);
+    }
+
+    fclose(fp);
     return 0;
 }
