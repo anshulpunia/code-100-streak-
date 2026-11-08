@@ -15,4 +15,4 @@ int main() {
     printf("The sum of the first %d odd numbers is: %d\n", n, sum);
 
     return 0;
-}2
+}
